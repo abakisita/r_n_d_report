@@ -1,0 +1,36 @@
+%!TEX root = ../report.tex
+
+\chapter{Introduction}
+
+The ease with which humans and animals accomplish extremely complex motions has influenced the research in robotic motion planning and control at various levels, right from motor control to high level planning. It is widely accepted that humans learn a great variety of movements, and that these movements are stored in some form in our memories \cite{lim2005movement}. One key observation can be made that the biological motions are consisted of \textit{motion primitives} (basic units of motion) perfected through experience over time\cite{schaal2006dynamic}. This can be concluded from the example of a tennis player. A tennis player takes months of practice to perfect his \textit{move} and to learn when to use it as well. This example is just a representative of vast number of skills acquired by humans and animals through experience. Various efforts have been made to adopt the concept of such motion primitives to generate robust robot control policy. Many variants of motion primitives are summarized in \cite{kober2013reinforcement} and \cite{deisenroth2013survey} which are necessarily model-free motion planning approaches because the primitives are learned independently without considering robot and environment model and validated at the time of execution. A motion primitive framework built around second order differential equation representing mass-spring damped system called \textit{Dynamic Movement Primitives} is particularly famous and this work uses the same.  
+
+\par To effectively combine and use motion primitives to achieve complex tasks, a knowledge representation framework is needed which can be used to store the knowledge about the motion primitive such as pre-conditions on motion primitives, effects of the motion primitive on the environment, feasibility, resource requirements, etc. This hypothesis can be backed by above example of tennis player. While playing, a tennis player has to choose his move considering various factors like, direction of approaching ball, possible direction of ball after hitting it, possibility of racket hitting other player in case of double's game, etc. A wrong move may have undesirable consequences. Tennis player acquires this knowledge through experience. But in case of robots, this initial knowledge can be hard-coded, stored and made available at the time of planning. Large community has been addressing the problem of efficiently learning and generalizing motion primitives. But knowledge representation and its effective use to generate complex behaviors is still an open issue. 
+\par Dynamic motion primitive is essentially an \textit{Learning from Demonstration} approach. A trajectory in joint space or task space is obtained from human demonstration. Then the control policy behind that trajectory is learned in attractor space of a nonlinear dynamic equation.
+
+\par Possible alternative for above mentioned biological skills is model-based motion planning and model-based control policy search. Both of these need a fairly accurate model of robot as well as the environment. Need of skills and experience required for motion execution is replaced by the accurate model of robot and environment. 
+
+\par During this Research and Development project, Dynamic movement Primitives were implemented with KUKA YouBot mobile manipulator along and the existing inverse kinematic velocity controller to effective use of DMP framework in mobile manipulation. Crucial modifications were made in already implemented inverse kinematic solver. Various experiments were performed to prove the usability of DMPs in ROBOCUP scenario and identify the need for knowledge base for DMPs. 
+
+\section{Motivation}
+\par  
+
+To be done ..... 
+
+\subsection{Combining Motion Primitives}
+\par Though above framework is endowed to learn complex motions, it is always desirable to learn simple motions and combine them to do complex task. By doing so, we can increase the re-usability of each motion primitive in other tasks. Nemec et al %\cite{Nemec2012}
+and Lioutikov et al %\cite{Lioutikov2016}
+presented approaches for sequencing simple motion primitives learned for a particular task in smooth manner. But for combining DMPs learned for one particular task to do a different task, a framework for knowledge base representation is needed. Such framework will allow not only the representation of DMP, but also the knowledge about a DMP which allows us to decide if DMP is suitable to be combined or not.   
+
+
+
+
+
+
+\section{Challenges and Difficulties}
+
+To be done
+
+
+\section{Problem Statement}
+
+To be done ... 
