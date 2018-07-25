@@ -134,6 +134,9 @@ Using singular value decomposition, equation \ref{damped_least_sol} can be rewri
 \end{equation} 
 
 It can be observed in above equation that if $\sigma >> \lambda$, then $\lambda$ has practically no effect on joint velocities. But if $\sigma$ is close to zero, then the joint velocities are greatly affected by value of $\lambda$.  
+
+Since the arm has only five degrees of freedom, it is always in singular configuration and hence it is not possible to execute the 6 degrees of motion at all the time instances. This situation can be overcome by ignoring motion in 3 rotational degrees of freedom with the help of the method called \textit{weighted damped least square pseudo inverse}. In this method, 	
 \section{Setup}
+
 
 \section{Experimental Design}
