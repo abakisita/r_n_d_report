@@ -84,7 +84,7 @@ Ijspeert et. al. in \cite{ijspeert2002movement} used the system of autonomous se
 	\item Ease of re-use for related tasks and easy modification for new tasks, and 
 	\item Ease of categorization for movement recognition.
 \end{enumerate}
-Trajectory information is encoded in the second order differential equation of damped mass spring system with a non-linear forcing term which is used for modifying the shape of trajectory. The non-linear forcing term is normalized weighted sum of Gaussians timed by a state vector who's evolution is guaranteed by another linear second order differential system. This whole system is stable and converges in limited time. Weights of the Gaussians are learned using locally weighted regression. This work was the necessary foundation of the theory of dynamic motion primitives. 
+Trajectory information is encoded in the second order differential equation of damped mass spring system with a non-linear forcing term which is used for modifying the shape of trajectory. The non-linear forcing term is normalized weighted sum of Gaussians timed by a state vector whose evolution is guaranteed by another linear second order differential system. This whole system is stable and converges in limited time. Weights of the Gaussians are learned by using locally weighted regression. This work was the necessary foundation of the theory of dynamic motion primitives. 
 \begin{equation} \label{Ijspeert_1}
 	\dot{z} = \alpha_{z}(\beta_{z}(g - y) - z)
 \end{equation}
