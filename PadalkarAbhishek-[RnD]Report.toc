@@ -13,25 +13,26 @@
 \contentsline {subsection}{\numberline {2.4.3}Dynamic Movement Primitives}{10}
 \contentsline {subsection}{\numberline {2.4.4}Advantages of Dynamic Movement Primitives}{16}
 \contentsline {chapter}{\numberline {3}Methodology}{19}
-\contentsline {section}{\numberline {3.1}Demonstration of Trajectories}{19}
-\contentsline {subsection}{\numberline {3.1.1}Recording Trajectories With arUco Marker Board}{20}
-\contentsline {subsection}{\numberline {3.1.2}Formalization of Dynamic Motion Primitives}{20}
-\contentsline {subsection}{\numberline {3.1.3}Learning the Attractor Dynamics from Observed Behavior}{21}
-\contentsline {subsection}{\numberline {3.1.4}Inverse Kinematics Solver and Trajectory Controller}{22}
-\contentsline {section}{\numberline {3.2}Setup}{24}
-\contentsline {section}{\numberline {3.3}Experimental Design}{24}
-\contentsline {chapter}{\numberline {4}Solution}{25}
-\contentsline {section}{\numberline {4.1}Proposed algorithm}{25}
-\contentsline {section}{\numberline {4.2}Implementation details}{25}
-\contentsline {chapter}{\numberline {5}Evaluation}{27}
-\contentsline {chapter}{\numberline {6}Results}{29}
-\contentsline {section}{\numberline {6.1}Use case 1}{29}
-\contentsline {section}{\numberline {6.2}Use case 2}{29}
-\contentsline {section}{\numberline {6.3}Use case 3}{29}
-\contentsline {chapter}{\numberline {7}Conclusions}{31}
-\contentsline {section}{\numberline {7.1}Contributions}{31}
-\contentsline {section}{\numberline {7.2}Lessons learned}{31}
-\contentsline {section}{\numberline {7.3}Future work}{31}
-\contentsline {chapter}{Appendix \numberline {A}Design Details}{33}
-\contentsline {chapter}{Appendix \numberline {B}Parameters}{35}
-\contentsline {chapter}{References}{37}
+\contentsline {subsection}{\numberline {3.0.1}Formalization of Dynamic Motion Primitives}{19}
+\contentsline {subsection}{\numberline {3.0.2}Learning the Motion Primitive from Demonstrated Trajectories}{23}
+\contentsline {subsection}{\numberline {3.0.3}Inverse Kinematics Solver and Trajectory Controller}{25}
+\contentsline {section}{\numberline {3.1}Setup}{26}
+\contentsline {section}{\numberline {3.2}Experimental Design}{26}
+\contentsline {chapter}{\numberline {4}Solution}{27}
+\contentsline {section}{\numberline {4.1}Proposed algorithm}{27}
+\contentsline {subsection}{\numberline {4.1.1}Whole Body Motion Control}{29}
+\contentsline {section}{\numberline {4.2}Implementation details}{29}
+\contentsline {subsection}{\numberline {4.2.1}Demonstrated Trajectory Recorder}{29}
+\contentsline {subsection}{\numberline {4.2.2}pydmps}{31}
+\contentsline {chapter}{\numberline {5}Evaluation}{33}
+\contentsline {chapter}{\numberline {6}Results}{35}
+\contentsline {section}{\numberline {6.1}Use case 1}{35}
+\contentsline {section}{\numberline {6.2}Use case 2}{35}
+\contentsline {section}{\numberline {6.3}Use case 3}{35}
+\contentsline {chapter}{\numberline {7}Conclusions}{37}
+\contentsline {section}{\numberline {7.1}Contributions}{37}
+\contentsline {section}{\numberline {7.2}Lessons learned}{37}
+\contentsline {section}{\numberline {7.3}Future work}{37}
+\contentsline {chapter}{Appendix \numberline {A}Design Details}{39}
+\contentsline {chapter}{Appendix \numberline {B}Parameters}{41}
+\contentsline {chapter}{References}{43}
