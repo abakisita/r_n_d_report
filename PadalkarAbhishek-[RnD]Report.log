@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.29)  30 JUL 2018 00:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.29)  6 AUG 2018 10:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,26 +321,23 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 LaTeX Warning: Unused global option(s):
     [twosides].
 
-(./PadalkarAbhishek-[RnD]Report.aux
-
-LaTeX Warning: Label `fig:DMP_framework' multiply defined.
-
-)
+(./PadalkarAbhishek-[RnD]Report.aux)
 \openout1 = `PadalkarAbhishek-[RnD]Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
 \scratchdimen=\dimen145
@@ -398,7 +395,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count130
-LaTeX Info: Redefining \microtypecontext on input line 29.
+LaTeX Info: Redefining \microtypecontext on input line 32.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -483,9 +480,9 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 File: images/Logo-HBRS-cyan.png Graphic file (type png)
 
 <use images/Logo-HBRS-cyan.png>
-Package pdftex.def Info: images/Logo-HBRS-cyan.png used on input line 31.
+Package pdftex.def Info: images/Logo-HBRS-cyan.png used on input line 34.
 (pdftex.def)             Requested size: 205.72229pt x 36.98866pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -493,7 +490,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -504,7 +501,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <images/b-it.pdf, id=2, 1949.2825pt x 516.93124pt>
 File: images/b-it.pdf Graphic file (type pdf)
  <use images/b-it.pdf>
-Package pdftex.def Info: images/b-it.pdf used on input line 31.
+Package pdftex.def Info: images/b-it.pdf used on input line 34.
 (pdftex.def)             Requested size: 139.46782pt x 36.98866pt.
 
 [1
@@ -608,47 +605,101 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Chapter 3.
 [19]
-Underfull \vbox (badness 2020) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
 <images/dmp.png, id=124, 831.105pt x 569.87906pt>
 File: images/dmp.png Graphic file (type png)
  <use images/dmp.png>
-Package pdftex.def Info: images/dmp.png used on input line 63.
+Package pdftex.def Info: images/dmp.png used on input line 65.
 (pdftex.def)             Requested size: 418.25368pt x 286.79099pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
-<images/DMP_6DOF.png, id=128, 536.0025pt x 522.95375pt>
+<images/dmp_no_f.png, id=128, 905.5431pt x 702.4644pt>
+File: images/dmp_no_f.png Graphic file (type png)
+
+<use images/dmp_no_f.png>
+Package pdftex.def Info: images/dmp_no_f.png used on input line 77.
+(pdftex.def)             Requested size: 418.25368pt x 324.45595pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <./images/dmp.png>] [23 <./images/dmp_no_f.png>]
+<images/step_function.png, id=138, 581.7735pt x 463.9734pt>
+File: images/step_function.png Graphic file (type png)
+
+<use images/step_function.png>
+Package pdftex.def Info: images/step_function.png used on input line 101.
+(pdftex.def)             Requested size: 290.88603pt x 231.98613pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+<images/n_bfs_.png, id=142, 815.2056pt x 477.7047pt>
+File: images/n_bfs_.png Graphic file (type png)
+ <use images/n_bfs_.png>
+Package pdftex.def Info: images/n_bfs_.png used on input line 116.
+(pdftex.def)             Requested size: 418.25368pt x 245.0913pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25 <./images/step_function.png>]
+Overfull \hbox (2.03879pt too wide) in paragraph at lines 123--130
+[][] 
+ []
+
+[26 <./images/n_bfs_.png>] <images/dt_.png, id=151, 526.1256pt x 523.9575pt>
+File: images/dt_.png Graphic file (type png)
+
+<use images/dt_.png>
+Package pdftex.def Info: images/dt_.png used on input line 162.
+(pdftex.def)             Requested size: 418.25368pt x 416.55223pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28 <./images/dt_.png>] <images/tau_.png, id=160, 1117.2942pt x 753.0534pt>
+File: images/tau_.png Graphic file (type png)
+
+<use images/tau_.png>
+Package pdftex.def Info: images/tau_.png used on input line 177.
+(pdftex.def)             Requested size: 418.25368pt x 281.90022pt.
+ <images/DMP_6DOF.png, id=161, 536.0025pt x 522.95375pt>
 File: images/DMP_6DOF.png Graphic file (type png)
 
 <use images/DMP_6DOF.png>
-Package pdftex.def Info: images/DMP_6DOF.png used on input line 69.
+Package pdftex.def Info: images/DMP_6DOF.png used on input line 183.
 (pdftex.def)             Requested size: 418.25368pt x 408.06985pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22 <./images/dmp.png>] [23 <./images/DMP_6DOF.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 106--136
+ [29 <./images/tau_.png>] [30 <./images/DMP_6DOF.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 217--247
 
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 159--164
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+Underfull \hbox (badness 10000) in paragraph at lines 270--275
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 172--175
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
-) (./chapters/ch04_solution.tex [26]
+) (./chapters/ch04_solution.tex [33] [34
+
+]
 Chapter 4.
-[27
-
-] <images/framework.png, id=151, 783.92876pt x 1110.1475pt>
+[35] <images/framework.png, id=188, 783.92876pt x 1110.1475pt>
 File: images/framework.png Graphic file (type png)
 
 <use images/framework.png>
@@ -658,39 +709,39 @@ Package pdftex.def Info: images/framework.png used on input line 11.
 Overfull \vbox (31.1029pt too high) has occurred while \output is active []
 
 
-[28 <./images/framework.png>]
+[36 <./images/framework.png>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [29]
-<images/aruco_marker_board.pdf, id=160, 597.50786pt x 845.04686pt>
+ [37]
+<images/aruco_marker_board.pdf, id=196, 597.50786pt x 845.04686pt>
 File: images/aruco_marker_board.pdf Graphic file (type pdf)
 
 <use images/aruco_marker_board.pdf>
 Package pdftex.def Info: images/aruco_marker_board.pdf used on input line 47.
 (pdftex.def)             Requested size: 179.25374pt x 253.516pt.
- [30 <./images/aruco_marker_board.pdf>])
-(./chapters/ch05_evaluation.tex [31] [32
+ [38 <./images/aruco_marker_board.pdf>])
+(./chapters/ch05_evaluation.tex [39] [40
 
 ]
 Chapter 5.
-) (./chapters/ch06_results.tex [33] [34
+) (./chapters/ch06_results.tex [41] [42
 
 ]
 Chapter 6.
-) (./chapters/ch07_conclusion.tex [35] [36
+) (./chapters/ch07_conclusion.tex [43] [44
 
 ]
 Chapter 7.
-) (./chapters/appendix.tex [37] [38
+) (./chapters/appendix.tex [45] [46
 
 ]
 Appendix A.
-[39] [40
+[47] [48
 
 ]
 Appendix B.
-) [41] [42
+) [49] [50
 
 ] (./PadalkarAbhishek-[RnD]Report.bbl
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
@@ -705,22 +756,19 @@ Underfull \hbox (badness 1210) in paragraph at lines 27--32
 e-fan Schaal.
  []
 
-[43
+[51
 
-] [44]) [45] (./PadalkarAbhishek-[RnD]Report.aux)
+] [52]) [53] (./PadalkarAbhishek-[RnD]Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 43.12pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 7702 strings out of 494910
- 110303 string characters out of 6179836
- 322259 words of memory out of 5000000
- 10701 multiletter control sequences out of 15000+600000
+ 7742 strings out of 494910
+ 111014 string characters out of 6179836
+ 322320 words of memory out of 5000000
+ 10736 multiletter control sequences out of 15000+600000
  15061 words of font info for 98 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,12n,47p,1598b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -735,10 +783,10 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt12.pfb>
-Output written on PadalkarAbhishek-[RnD]Report.pdf (59 pages, 494911 bytes).
+Output written on PadalkarAbhishek-[RnD]Report.pdf (67 pages, 785981 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+ 291 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11807 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 11832 words of extra memory for PDF output out of 12000 (max. 10000000)
 

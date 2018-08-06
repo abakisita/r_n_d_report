@@ -1,11 +1,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Dynamic Movement Primitive framework}}{22}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Dynamic Movement Primitive framework}}{23}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Dynamic Movement Primitive framework \cite {ijspeert2013dynamical}}}{22}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 2D DMP with no forcing term}}{23}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Step function trajectory path}}{25}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Effect of number of basis functions ($n\_bfs$)}}{26}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Effect of time step size ($dt$)}}{28}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Effect of time scaling factor $tau$}}{29}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 6D DMP framework used during experimentation}}{30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Dynamic Movement Primitive framework}}{28}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces arUco marker board used for demonstrations}}{30}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Dynamic Movement Primitive framework}}{36}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces arUco marker board used for demonstrations}}{38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
