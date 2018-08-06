@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.29)  6 AUG 2018 10:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.29)  6 AUG 2018 15:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,7 +321,11 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 LaTeX Warning: Unused global option(s):
     [twosides].
 
-(./PadalkarAbhishek-[RnD]Report.aux)
+(./PadalkarAbhishek-[RnD]Report.aux
+
+LaTeX Warning: Label `_dt_e' multiply defined.
+
+)
 \openout1 = `PadalkarAbhishek-[RnD]Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -336,8 +340,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
 \scratchdimen=\dimen145
@@ -631,7 +634,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/step_function.png Graphic file (type png)
 
 <use images/step_function.png>
-Package pdftex.def Info: images/step_function.png used on input line 101.
+Package pdftex.def Info: images/step_function.png used on input line 108.
 (pdftex.def)             Requested size: 290.88603pt x 231.98613pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -640,13 +643,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/n_bfs_.png, id=142, 815.2056pt x 477.7047pt>
 File: images/n_bfs_.png Graphic file (type png)
  <use images/n_bfs_.png>
-Package pdftex.def Info: images/n_bfs_.png used on input line 116.
+Package pdftex.def Info: images/n_bfs_.png used on input line 123.
 (pdftex.def)             Requested size: 418.25368pt x 245.0913pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./images/step_function.png>]
-Overfull \hbox (2.03879pt too wide) in paragraph at lines 123--130
+Overfull \hbox (2.03879pt too wide) in paragraph at lines 130--137
 [][] 
  []
 
@@ -654,7 +657,7 @@ Overfull \hbox (2.03879pt too wide) in paragraph at lines 123--130
 File: images/dt_.png Graphic file (type png)
 
 <use images/dt_.png>
-Package pdftex.def Info: images/dt_.png used on input line 162.
+Package pdftex.def Info: images/dt_.png used on input line 169.
 (pdftex.def)             Requested size: 418.25368pt x 416.55223pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -666,66 +669,65 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/tau_.png Graphic file (type png)
 
 <use images/tau_.png>
-Package pdftex.def Info: images/tau_.png used on input line 177.
+Package pdftex.def Info: images/tau_.png used on input line 183.
 (pdftex.def)             Requested size: 418.25368pt x 281.90022pt.
- <images/DMP_6DOF.png, id=161, 536.0025pt x 522.95375pt>
+ [29 <./images/tau_.png>] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 237--267
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 280--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--296
+
+ []
+
+[32]) (./chapters/ch04_solution.tex [33] [34
+
+]
+Chapter 4.
+<images/DMP_6DOF.png, id=181, 536.0025pt x 522.95375pt>
 File: images/DMP_6DOF.png Graphic file (type png)
 
 <use images/DMP_6DOF.png>
-Package pdftex.def Info: images/DMP_6DOF.png used on input line 183.
+Package pdftex.def Info: images/DMP_6DOF.png used on input line 9.
 (pdftex.def)             Requested size: 418.25368pt x 408.06985pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29 <./images/tau_.png>] [30 <./images/DMP_6DOF.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 217--247
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
-Underfull \hbox (badness 10000) in paragraph at lines 270--275
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 283--286
-
- []
-
-) (./chapters/ch04_solution.tex [33] [34
-
-]
-Chapter 4.
-[35] <images/framework.png, id=188, 783.92876pt x 1110.1475pt>
+ [35]
+[36 <./images/DMP_6DOF.png>]
+<images/framework.png, id=191, 783.92876pt x 1110.1475pt>
 File: images/framework.png Graphic file (type png)
 
 <use images/framework.png>
-Package pdftex.def Info: images/framework.png used on input line 11.
+Package pdftex.def Info: images/framework.png used on input line 19.
 (pdftex.def)             Requested size: 418.25368pt x 592.30533pt.
 
 Overfull \vbox (31.1029pt too high) has occurred while \output is active []
 
 
-[36 <./images/framework.png>]
+[37 <./images/framework.png>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [37]
-<images/aruco_marker_board.pdf, id=196, 597.50786pt x 845.04686pt>
+ [38]
+<images/aruco_marker_board.pdf, id=199, 597.50786pt x 845.04686pt>
 File: images/aruco_marker_board.pdf Graphic file (type pdf)
 
 <use images/aruco_marker_board.pdf>
-Package pdftex.def Info: images/aruco_marker_board.pdf used on input line 47.
+Package pdftex.def Info: images/aruco_marker_board.pdf used on input line 55.
 (pdftex.def)             Requested size: 179.25374pt x 253.516pt.
- [38 <./images/aruco_marker_board.pdf>])
-(./chapters/ch05_evaluation.tex [39] [40
-
-]
+ [39 <./images/aruco_marker_board.pdf>])
+(./chapters/ch05_evaluation.tex [40]
 Chapter 5.
-) (./chapters/ch06_results.tex [41] [42
+) (./chapters/ch06_results.tex [41
+
+] [42
 
 ]
 Chapter 6.
@@ -763,11 +765,14 @@ e-fan Schaal.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 43.12pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
  7742 strings out of 494910
  111014 string characters out of 6179836
- 322320 words of memory out of 5000000
+ 322359 words of memory out of 5000000
  10736 multiletter control sequences out of 15000+600000
  15061 words of font info for 98 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -783,7 +788,7 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt12.pfb>
-Output written on PadalkarAbhishek-[RnD]Report.pdf (67 pages, 785981 bytes).
+Output written on PadalkarAbhishek-[RnD]Report.pdf (67 pages, 787869 bytes).
 PDF statistics:
  291 PDF objects out of 1000 (max. 8388607)
  189 compressed objects within 2 object streams

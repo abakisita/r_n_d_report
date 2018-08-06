@@ -7,10 +7,10 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Effect of number of basis functions ($n\_bfs$)}}{26}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Effect of time step size ($dt$)}}{28}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Effect of time scaling factor $tau$}}{29}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces 6D DMP framework used during experimentation}}{30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Dynamic Movement Primitive framework}}{36}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces arUco marker board used for demonstrations}}{38}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 6D DMP framework used during experimentation}}{36}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Dynamic Movement Primitive framework}}{37}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces arUco marker board used for demonstrations}}{39}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

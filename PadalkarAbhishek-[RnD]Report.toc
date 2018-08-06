@@ -19,15 +19,15 @@
 \contentsline {subsubsection}{Effect of time step size}{27}
 \contentsline {subsubsection}{Effect of time scaling factor $tau$}{29}
 \contentsline {subsection}{\numberline {3.0.3}Learning the Motion Primitive from Demonstrated Trajectories}{30}
-\contentsline {subsection}{\numberline {3.0.4}Inverse Kinematics Solver and Trajectory Controller}{32}
+\contentsline {subsection}{\numberline {3.0.4}Inverse Kinematics Solver and Trajectory Controller}{31}
 \contentsline {section}{\numberline {3.1}Setup}{33}
 \contentsline {section}{\numberline {3.2}Experimental Design}{33}
 \contentsline {chapter}{\numberline {4}Solution}{35}
-\contentsline {section}{\numberline {4.1}Proposed algorithm}{35}
-\contentsline {subsection}{\numberline {4.1.1}Whole Body Motion Control}{37}
-\contentsline {section}{\numberline {4.2}Implementation details}{37}
-\contentsline {subsection}{\numberline {4.2.1}Demonstrated Trajectory Recorder}{37}
-\contentsline {subsection}{\numberline {4.2.2}pydmps}{39}
+\contentsline {section}{\numberline {4.1}Proposed algorithm}{36}
+\contentsline {subsection}{\numberline {4.1.1}Whole Body Motion Control}{38}
+\contentsline {section}{\numberline {4.2}Implementation details}{38}
+\contentsline {subsection}{\numberline {4.2.1}Demonstrated Trajectory Recorder}{38}
+\contentsline {subsection}{\numberline {4.2.2}pydmps}{40}
 \contentsline {chapter}{\numberline {5}Evaluation}{41}
 \contentsline {chapter}{\numberline {6}Results}{43}
 \contentsline {section}{\numberline {6.1}Use case 1}{43}
