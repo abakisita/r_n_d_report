@@ -3,65 +3,71 @@
 \chapter{Solution}
 
 
-During this research and development project, a system was implemented which is able to record human demonstrations in terms of kinematic trajectory, learn the motion in terms of dynamic motion primitive, reproduce the motion using dynamic motion primitive and execute this motion on manipulator.     
+In this project, a system was implemented which is able to the record human demonstrations as kinematic trajectories, learn the motion in the form of dynamic motion primitive, reproduce the motion using dynamic motion primitives and execute this motion with mobile manipulator. This chapter discusses the actual design and the implementation of the software system. 
 
-\begin{figure}[H]
-	\includegraphics[width=\textwidth]{images/DMP_6DOF.png}
-	\caption{6D DMP framework used during experimentation}
-	\label{fig:DMP_6DOF}
-\end{figure}
+\section{Software Components}
+
+Fig. \ref{fig:framework} shows the architecture of the implemented software system. Let's discuss components of this architecture one-by-one.  
+
+\subsection{demonstrated\_trajectory\_recorder}
 
 
-\section{Proposed algorithm}
+ 
+\textit{demonstrated\_trajectory\_recorder} records the trajectory demonstrated by the teacher with the help of arUco marker board, in the Cartesian space. Recorded trajectory is stored in a $n\text{x}6$ matrix. This matrix is then stored on the disk in \textit{yaml} file. Although all 6 degrees of freedom (3 linear and 3 rotational) are recorded during the demonstration, only linear degrees of freedom (X,Y,Z) are used for learning as demonstration of rotational degrees of freedom using arUco marker is difficult. Once the trajectory is recorded, it is also published on a \textit{rostopic} as a \textit{naviagation path} message for visualization in \textit{rviz}. 
 
-\newpage
+\subsection{ros\_dmp} \textit{ros\_dmp} module consists of core DMP framework implementation called \textit{pydmps}, which is taken from internet source \cite{pydmps}. Implementing core DMP framework is fairly simple and straight forward, hence instead of implementing it from scratch, efforts were focused towards adapting already available implementation for Robot Operating System and robots. Changes were made in the original package so that it can be integrated with Robot Operating System and can be used on the robot. Changes include:
+\begin{itemize}
+	\item Addition of a method for retrieval of the weights of learned DMP.
+	\item Modification in \textit{roll()} method to allow passing already learned weights.
+	\item Removing unnecessary code for visualization. 
+	\item Transforming package into a \textit{catkin} package so that it can be used as library in ROS workspace.
+\end{itemize} 
+
+Module \textit{learn\_motion\_primitive} provides the interface for learning the motion primitives from recorded trajectories. It reads recorded trajectory stored in \textit{yaml} file, uses the functionalities provided by the package \textit{pydmps} to learn motion primitive, stores weights in the another \textit{yaml} file and visualizes the learned DMP using \textit{RVIZ} tool in ROS.
+
+Module \textit{roll\_dmp} reads the weight file associated with desired DMP to be executed. It takes the target end-effector pose in Cartesian co-ordinates as goal input and generates trajectory using functionalities provided by \textit{pydmps} package. It is also possible to solve the \textit{transformation system} step by step at fixed time intervals to generate instantaneous motion commands. This is necessary in the scenario where feedback from the environment and robot is needed to be incorporated in the DMP. One example of such feedback is on-line goal modification.      
+
+
+
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/framework.png}
-	\caption{Dynamic Movement Primitive framework}
+	\caption{Learning from Demonstration framework}
 	\label{fig:framework}
 \end{figure}
 
-\subsection{Whole Body Motion Control}
 
-For the mobile manipulators like KUKA YouBot and Toyota HSR, it is always desirable to have a whole body control functionality i.e. executing motion using mobile base as well as manipulator in order to achieve a objective (e.g. attaining a particular end effector pose in global reference frame or executing a trajectory represented in global reference frame). Commonly used sampling based algorithms can be used to achieve this goal by providing model of environment as well as robot. Dynamic programming based approaches and optimization based motion planning can also solve the problem of whole body motion control, but they heavily suffer from the increased dimensionality of the problem. Prominent drawbacks of such methods are described below. 
-
-While conducting the initial experiments on DMP framework with KUKA YouBot, we came across the serious problem of limited manipulation functionality of 5 degrees of freedom manipulator. Numerous trajectories demonstrated were not executable by manipulator alone. This triggered the idea of incorporating base movement to execute the manipulator motion. 
+\subsection{DMP\_Library} \textit{DMP\_Library} is a collection of \textit{yaml} files containing learned weights of DMPs. Files are labeled appropriately so that the weights can be retrieved whenever necessary.
 
 
-  
 
-\section{Implementation details}
+\subsection{dmp\_executor}
 
-In order to use dynamic motion primitives in robotics, one has to demonstrate the motion to robot, learn the control policy using DMPs, reproduce the motion policy or trajectory and then execute the motion with robot. In this research and development project, motion trajectory is demonstrated using visual demonstrations with the help of arUco marker board. Since the trajectory is learned and reproduced in task space, it is mapped to joint space using kinematic solver and then executed on the robot. Above figure shows the architecture of the software implementation. Necessary components for above mentioned steps are as follows, 
+\textit{dmp\_executor} acts as the upper level control unit which executes trajectories or motion commands generated by \textit{roll\_dmp} module in \textit{ros\_dmp} package. \textit{trajectory\_executor} receives desired trajectory from \textit{ros\_dmp} and passes the velocity command to \textit{whole\_body\_motion\_control} unit, at each time step. Instead of using time as a velocity update parameter, it takes feedback of the pose of the end-effector and applies appropriate velocity command when end-effector reaches at particular position on the path.  
 
-\subsection{Demonstrated Trajectory Recorder}
-Various methods for demonstrating trajectories are practiced by researchers mainly :
-\begin{itemize} 
-	
-	\item Teleoperation : A demonstration technique in which the teacher operates the robot learner platform and the robot’s sensors record the execution. 	\cite{argall2009survey}	
-	
-	\item Shadowing : A demonstration technique in which the robot learner records the execution using its own sensors while attempting to match or mimic the teacher motion as the teacher executes the task.
-	
-	\item Sensors on teacher : An imitation technique in which sensors located on the executing body are used to record the teacher execution.
-	
-	\item External observation : An imitation technique in which sensors external to the executing body are used to record the execution.
-	
-\end{itemize}
 
-In this project, \textit{external observation} method was used to demonstrate trajectories. Teacher demonstrated trajectories by moving arUco marker board on desired path. A computer vision system ensured the recording of poses of arUco marker board in robot \textit{base\_link} frame, at constant rate. 
+\textit{whole\_body\_motion\_control} receives the velocity command from \textit{trajectory\_executor} or directly from \textit{roll\_dmp} module. The velocity command is then processed according to the policy described in section \ref{whole_body_motion} to obtain end-effector velocity and base velocity. These velocities are then passed to respective low level controllers.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.3]{images/aruco_marker_board.pdf}
-	\caption{arUco marker board used for demonstrations}
-	\label{fig:aruco_marker_board}
-\end{figure}
+\subsection{arm\_cartesian\_velocity\_controller}
 
-A RGB camera mounted on the robot (mounted on arm in case of KUKA YouBot and mounted on head in case of Toyota HSR) constantly captures images of the arUco marker board which is being moved by teacher for demonstration. Captured images are processed for estimating boards position in camera optical frame. A already available library in opencv is used to estimate the board's 6D pose. Then the estimated pose is transformed to robot's base\_link using transforms published by robot\_state\_publisher. 
+This package is a upgraded version of the package \textit{mcr\_arm\_cartesian\_control} in \textit{mas\_common\_robotics} library of b-it-bots. This package use \textit{OROCOS KDL (Kinematics and Dynamics Library)} library for calculating joint velocities for required Cartesian velocities of the end-effector frame. Class KDL::ChainIkSolverVel\_wdls in \textit{OROCOS KDL} implements the method described in section \ref{IK}. 
 
-\subsection{pydmps}
+To use the previously implemented package in this project, some crucial changes were needed in order to meet new requirements. These requirements are:
 
-During this research and development project, the DMP framework described by eq. \ref{DMP_1}, \ref{DMP_2} and \ref{canonical} implemented in open-source project \textit{pydmps}\cite{pydmps}, is used. The original implementation cannot be used for robot control because of following reasons: 
 \begin{itemize}
-	\item 
+	\item Accessing singular values of Jacobian of the manipulator. (refer section \ref{IK} for singular values) 
+	\item A way to change task space weights used in method described in \ref{IK}.
+	\item Compatibility with new Toyota HSR robot. 
 \end{itemize} 
+
+Real time access to the singular values is necessary for calculating velocity commands for whole body motion control. Old package \textit{mcr\_arm\_cartesian\_control} uses old version of KDL which is the default version of KDL in ROS Kinetic. This version of KDL does not provide interface to access singular values in real time. Hence the old package is adopted for new version of KDL. A method was created to publish singular values on a \textit{rostopic} in real time. 
+
+As both of the manipulators used in the experiments have 5 degrees of freedom, it is necessary to update task-space weights used to loosen the constraints on relatively less important motions in specific degree of freedom in real time. Hence a function was implemented which listen to a \textit{rostopic} on which weights can be published. This function updates the weights upon receiving new weights.   
+
+Velocity message types used in Toyota HSR robot are different than those being used in KUKA YouBot, hence it was necessary to upgrade old package to use message types that can be used by both robots.         
+
+\subsection{Robot}
+
+Once the joint velocity commands and the linear velocities for the base are generated, they are published on respective \textit{rostopics}. These \textit{rostopics} are subscribed by the respective hardware interface components, which are responsible for the execution of motion commands. Study and analysis of these components is out of the scope of this project.  
+
+
+

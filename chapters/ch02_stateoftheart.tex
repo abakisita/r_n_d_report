@@ -4,22 +4,27 @@
 
 \section{Robot Motion Planning}
   
-"...eminently necessary since, by definition, a robot accomplishes tasks by moving in the real world." - J.-C. Latombe (1991). The first requirement of a robot, no-matter whether it is a manipulator, a mobile robotic platform or a drone, is to be able to move in the environment to accomplish its tasks. Robot Motion Panning is a decades old concept and over the time various algorithms have been developed to tackle the problem of planning which are good enough to provide  solutions for real world situations. Few of them are summarized below.\\
-Potential field methods for motion planning were proposed in the early period, which follow the gradient of a potential that guides a robot to its goal \cite{khatib1986real}. It is difficult, though, to come up with a general mechanism to escape local minima of a potential function or design a potential function that has only one minimum. \\
-Another family of planning algorithms is composed of heuristic search techniques (e.g., A*) that operate over a discretization of possible robot configurations. These algorithms provide resolution completeness: A path will be found if the discretization is fine enough. A careful choice of resolution and heuristics is critical for efficient heuristic search. But complexity of these algorithm makes it hard to scale them for higher dimensions and adopt them for constraints \cite{kingston2018sampling}. 
+"...eminently necessary since, by definition, a robot accomplishes tasks by moving in the real world." - J. C. Latombe (1991). 
 
-Dynamic programming is one the algorithm which is proven to be good fo low dimensional problems. It is mathematical optimization method where set of constraints on robot motion is provided and algorithm tries to optimize the trajectory to meet all the constraints. 
+The first requirement of a robot, no-matter whether it is a manipulator, a mobile robotic platform or a drone, is to be able to move in the environment to accomplish its tasks. Robot motion planning is a decades old problem and over the time various algorithms have been developed to tackle the problem of planning which are good enough to provide  solutions for real world situations. Few of them are summarized below.
 
-Recently, approaches that use penalty functions to optimize the trajectory have been proposed. They soft the hard constraints into soft constraints and combine them into one formulation. By optimizing the penalty function, a optimized trajectory against parameters like time, energy, etc. is obtained. But these algorithms suffer from the problem of being trapped in local minima and may require huge amount of computation leaving them useless for real time application in robots with limited computation power\cite{kingston2018sampling}.
+Potential field methods for motion planning were proposed in the early period, which uses the gradient of a potential that guides a robot to its goal \cite{khatib1986real}. It is difficult, though, to come up with a general mechanism to escape local minima of a potential function or design a potential function that has only one minimum. 
+
+Another family of planning algorithms is composed of heuristic search techniques (e.g., A*) that operate over a discretization of possible robot configurations. "These algorithms provide resolution completeness: A path will be found if the discretization is fine enough. A careful choice of resolution and heuristics is critical for efficient heuristic search."\cite{kingston2018sampling} But complexity of these algorithm makes it hard to scale them for higher dimensions and adopt them for constraints \cite{kingston2018sampling}. 
+
+Dynamic programming is one the algorithms which are proven to be good for low dimensional problems. It is mathematical optimization method where set of constraints on robot motion is provided and algorithm tries to optimize the trajectory to meet all the constraints. 
+
+Recently, approaches that use penalty functions to optimize the trajectory have been proposed. They soften the hard constraints into soft constraints and combine them into one formulation. By optimizing the penalty function, a optimized trajectory against parameters like time, energy, etc. is obtained. But these algorithms suffer from the problem of being trapped in local minima and may require huge amount of computation leaving them useless for real time application in robots with limited computation power\cite{kingston2018sampling}. They also suffer from the increased dimensionality of the problem.
   
-Sampling-based algorithms take a very different approach. They randomly sample valid robot configurations and form a graph of valid motions. Many algorithms provide probabilistic completeness: The probability of finding a solution goes to 1 with the run time of the algorithm,
-provided a solution exists. Sampling-based motion planning algorithms are effective at solving motion planning problems in a broad range of settings with minimal changes, including very-high-dimensional systems\cite{kingston2018sampling}. 
+Sampling-based algorithms take a very different approach. They randomly sample the valid robot configurations and form a graph of valid motions. "Many algorithms provide probabilistic completeness: The probability of finding a solution goes to 1 with the run time of the algorithm, provided a solution exists."\cite{kingston2018sampling} Sampling-based motion planning algorithms are effective at solving motion planning problems in a broad range of settings with minimal changes, including very-high-dimensional systems\cite{kingston2018sampling}. 
 
-The Rapidly-exploring Random Tree (RRT) is sampling based exploration algorithm for quickly searching high dimensional spaces that have both global constraints (arising from workspace obstacles and velocity bounds) and differential constraints (arising from kinematics and dynamics) \cite{lavalle2003dynamic}. The key idea is to bias the exploration toward unexplored portions of the space by randomly sampling points in the state space, and incrementally “pulling” the search tree toward them. RRT can be used for motion planning by using randomly generated tree in configuration space and validating it using the constraints defined. Not every solution found by RRT is feasible and optimal which makes method incomplete and non-optimal. But this method is quiet effective in in high dimensional problems with numerous constraints. 
+The Rapidly-exploring Random Tree (RRT) is sampling based exploration algorithm for quickly searching high dimensional spaces that have both global constraints (arising from workspace obstacles and velocity bounds) and differential constraints (arising from kinematics and dynamics) \cite{lavalle2003dynamic}. The key idea is to bias the exploration toward unexplored portions of the space by randomly sampling points in the state space, and incrementally “pulling” the search tree toward them. RRT can be used for motion planning by using randomly generated tree in configuration space of the robot and validating it using the predefined constraints. Not every solution found by RRT is feasible and optimal which makes method incomplete and non-optimal. But this method is quiet effective in high dimensional problems with numerous constraints. 
 
-MoveIt!, one of the widely used motion planning and control framework, uses sampling based motion planing algorithms provided by Open Motion Planning Library (OMPL) by default. The solutions generated by sampling based algorithms, which use inverse kinematic solvers to find configuration space samples, are often not continuous. It can be understood by following example. 
+\textit{MoveIt!}, one of the widely used motion planning and control framework, uses sampling based motion planing algorithms provided by \textit{Open Motion Planning Library (OMPL)} by default. The solutions generated by sampling based algorithms, which use inverse kinematic solvers to find configuration space samples, are often not continuous.
 
-Moreover, motion plans are often generated without considering robots ability to execute them in real world, the uncertainties like slip, inaccuracy in executions, and dynamic changes in the environment like real time change in goal or moving obstacle. Often these dynamic changes and uncertainties lead to inaccurate manipulation and re-planning. Theoretically it is possible to accommodate these dynamic environmental parameters into a plan but it hard and complex to do so. 
+Moreover, motion plans are often generated without considering robots ability to execute them in real world, the uncertainties like slip, inaccuracy in executions, and dynamic changes in the environment like real time change in goal or moving obstacle. Often these dynamic changes and uncertainties lead to inaccurate manipulation and re-planning. Theoretically it is possible to accommodate these dynamic environmental parameters into a plan but it hard and complex to do so.
+
+ 
 
 Another way to go is to generate a control policy instead of generating motion plan. Mechanisms can be developed to accommodate uncertainties and dynamic changes in environment and easily adopted into control policy.  
 
@@ -61,10 +66,10 @@ This approach has been used to generalize a open-loop reaching movement and to l
 
 
 \section{Control Policy Representation Using Movement Primitives}
-Movement Primitives (MPs) are commonly used for representing and learning basic movements in robotics. MP formulations are compact parameterizations of the robot’s control policy. Modulating their parameters permits imitation and reinforcement learning as well as adapting to different scenarios \cite{paraschos2013probabilistic}. 
+Movement Primitives (MPs) are commonly used for representing and learning basic movements in robotics. "MP formulations are compact parameterizations of the robot’s control policy. Modulating their parameters permits imitation and reinforcement learning as well as adapting to different scenarios." \cite{paraschos2013probabilistic}
 
 \subsection{Motion Primitives Using Principle Component Analysis}
-In \cite{lim2005movement}, authors have proposed a high-level framework for robot movement coordination and learning that combines elements of movement storage, dynamic models, and optimization, with the ultimate objective of generating natural, human-like motions. Movement primitive is represented and stored as a set of joint trajectory basis functions; these basis functions are extracted via a principal component analysis of human motion capture data. Dynamics based optimization is performed on the learned movement primitives to optimize them to use minimum torque. They also discuss about the general framework to deploy the movement primitive in real world task. In this, a task parser uses description of task to generate a sequence of the movements. Then the movement compiler chooses appropriate motion primitives to perform sequence of movements. 
+In \cite{lim2005movement}, authors have proposed a high-level framework for robot movement coordination and learning that combines elements of movement storage, dynamic models, and optimization, with the ultimate objective of generating natural, human-like motions. Movement primitive is represented and stored as a set of joint trajectory basis functions; these basis functions are extracted via a principal component analysis of human motion capture data. Dynamics based optimization is performed on the learned movement primitives to optimize them to use minimum torque. They also discuss about the general framework to deploy the movement primitive in real world task. In this work, a task parser uses the description of the task to generate a sequence of the movements. Then the movement compiler chooses appropriate motion primitives to perform the sequence of movements. 
 \par This method learns movement primitives in terms of joint trajectories, hence it has limited generalization ability when it comes to task space goal execution. This class of movement primitives does not incorporate feedback from the environment.   
 
 \subsection{Probabilistic Movement Primitives}
@@ -73,8 +78,9 @@ Paraschos et al. in \cite{paraschos2013probabilistic} present probabilistic appr
 
 
 
-\subsection{Dynamic Movement Primitives}
+\subsection{Dynamic Movement Primitives (DMP)}
 % Movement imitation with nonlinear dynamical systems in humanoid robots
+In this research project, dynamic motion primitives are used to learn the control policy behind a trajectory. So let's see the evolution of DMP in detail. 
 
 Ijspeert et. al. in \cite{ijspeert2002movement} used the system of autonomous second order differential equations for encoding control policy. This formulation was motivated by following five goals:
 \begin{enumerate}
@@ -84,12 +90,17 @@ Ijspeert et. al. in \cite{ijspeert2002movement} used the system of autonomous se
 	\item Ease of re-use for related tasks and easy modification for new tasks, and 
 	\item Ease of categorization for movement recognition.
 \end{enumerate}
-Trajectory information is encoded in the second order differential equation of damped mass spring system with a non-linear forcing term which is used for modifying the shape of trajectory. The non-linear forcing term is normalized weighted sum of Gaussians timed by a state vector whose evolution is guaranteed by another linear second order differential system. This whole system is stable and converges in limited time. Weights of the Gaussians are learned by using locally weighted regression. This work was the necessary foundation of the theory of dynamic motion primitives. 
+
+To meet above requirements, trajectory information is encoded in the second order differential equation of damped mass spring system with a non-linear forcing term which is used for modifying the shape of trajectory. The non-linear forcing term is normalized weighted sum of Gaussian functions timed by a state vector whose evolution is guaranteed by another linear second order differential system. This whole system is stable and converges in limited time. Weights of the Gaussian functions are learned by using locally weighted regression. This work was the necessary foundation of the theory of dynamic motion primitives. 
 \begin{equation} \label{Ijspeert_1}
 	\dot{z} = \alpha_{z}(\beta_{z}(g - y) - z)
 \end{equation}
 \begin{equation} \label{Ijspeert_2}
 	\dot{y} = z + \frac{\sum_{i=1}^{N}\psi_{i}w_{i}}{\sum_{i=1}^{N}\psi_{i}}
+\end{equation}
+and $\psi_{i}$ is given by,
+\begin{equation}
+\psi = exp(-\frac{1}{2\sigma_{i}^{2}}(\tilde{x} - c_{i}^{2}))
 \end{equation}
 Above system of equations is essentially a simple second-order system with the exception that its velocity is modified by a nonlinear term (the second term in equation \ref{Ijspeert_2}) which depends on internal states. These two internal states, $(v,x)$ have the following second-order linear dynamics
 \begin{equation}
@@ -97,10 +108,6 @@ Above system of equations is essentially a simple second-order system with the e
 \end{equation}
 \begin{equation}
 \dot{x} = v
-\end{equation}
-and $\psi_{i}$ is given by,
-\begin{equation}
-\psi = exp(-\frac{1}{2\sigma_{i}^{2}}(\tilde{x} - c_{i}^{2}))
 \end{equation}
 where $\tilde{x} = (x - x0)/(g - x0)$
 
@@ -186,15 +193,18 @@ Karlsson et.al.\cite{karlsson2017autonomous} presented the approach for modifica
 Hoffman et.al. in \cite{hoffmann2009biologically} presented solution for the problem of automatic real-time goal adaptation and obstacle avoidance in dynamic motion primitives.They also modified the DMP framework to enable use of DMP where there is no offset in initial and goal position. This was not possible in previous formulation.
 
 
-\subsection{Advantages of Dynamic Movement Primitives}
-\begin{itemize}
-	\item It is a model free learning approach.
-	\item Any arbitrary trajectory can be learned in end-effector space as well as in joint space.
-	\item Here learning is linear regression, so it does not need large dataset.
-	One trajectory is sufficient ideally.
-	\item Trajectories can be scaled in space as well as in time.
-	\item Dynamic motion primitives can be initialized anywhere in the attractor space.
-	\item Trajectory evolves as robot actually moves along the trajectory. Hence on-line modifications in the trajectory are possible.
-	\item These modifications can be realized by introducing vanishing coupling terms in the differential equations (e.g. potential field around a obstacles \cite{park2008movement}). Perturbations can be handled robustly due to this reason.
-	\item Re-planning is not needed unless an event causing major disturbance in the environment occurs.
+
+\subsection{Demonstrated Trajectory Recorder}
+Over the time various methods for demonstration of the trajectory are developed.
+These methods mainly include:
+\begin{itemize} 
+	
+	\item Teleoperation : A demonstration technique in which the teacher operates the robot learner platform and the robot’s sensors record the execution\cite{argall2009survey}.	
+	
+	\item Shadowing : A demonstration technique in which the robot learner records the execution using its own sensors while attempting to match or mimic the teacher motion as the teacher executes the task\cite{argall2009survey}.
+	
+	\item Sensors on teacher : An imitation technique in which sensors located on the executing body are used to record the teacher execution\cite{argall2009survey}.
+	
+	\item External observation : An imitation technique in which sensors external to the executing body are used to record the execution\cite{argall2009survey}.
+	
 \end{itemize}

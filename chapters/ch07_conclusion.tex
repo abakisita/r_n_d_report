@@ -2,10 +2,33 @@
 
 \chapter{Conclusions}
 
+In this project, a learning from demonstration architecture was developed for robot programming. Trajectories were demonstrated to the robot by visual demonstrations and control policies were learned using dynamic motion primitives. We provide an intuitive explanation of the working of the dynamic motion primitives. Dynamic motion primitives were, then evaluated for their performance by learning and generalizing an artificially generated step function trajectory. Various parameter were varied in order to evaluate their effect on the performance of the DMP. In next step, we evaluated the performance of the DMP framework along with the trajectory controller on KUKA YouBot manipulator. By observing limitations on the motion of the KUKA YouBot manipulator, we developed the concept of using motion policy encoded in DMP for performing whole body motion control. Developed whole body motion control architecture significantly increased the manipulation capabilities of the mobile manipulators KUKA YouBot and Toyota HSR. Whole body motion control has already been integrated into software stack used on Toyota HSR, where it replaces the MoveIt! framework for motion planning. With all these experiments, we gathered enough insights of the working of DMPs for building a library of DMP and use it for performing robotic tasks in RoboCup@Home scenario.  
+
 \section{Contributions}
 
+Contributions of this project include:
+\begin{itemize}
+	\item Evaluation of the DMP framework for learning from demonstration.
+	\item Standalone ROS package \textit{ros\_dmp} which can be ported easily from one robot to another. 
+	\item Development of \textit{whole body motion control framework} for mobile manipulators.
+	\item Replacement for the MoveIt! motion planning framework on Toyota HSR.
+	\item A improved software package for Cartesian velocity control of a manipulator.
+\end{itemize}
 
-\section{Lessons learned}
+By evaluating the DMP framework on robots through various experiments, important observations and conclusions were drawn which are necessary in integrating DMP framework in the RoboCup@Home scenario. These experiments gave important insights, based on which a design of knowledge base and DMP library is possible where a DMP will be learned, stored in the library along with the knowledge associated with it. The knowledge base, then can be used to choose particular DMP suitable for the situation. 
 
+DMP-based execution has already been integrated into our domestic repository, namely in the \textit{move\_arm} action.\footnote{(https://github.com/b-it-bots/mas\_domestic\_robotics/tree/kinetic/mdr\_planning/mdr\_actions/\\mdr\_manipulation\_actions/mdr\_move\_arm\_action)} 
+
+Videos of the experiments on KUKA YouBot\footnote{https://www.youtube.com/watch?v=jEtlm96KAbA\&t=44s} and Toyota HSR\footnote{https://www.youtube.com/watch?v=OC7vttt4-Jo} can be accessed online. 
 
 \section{Future work}
+
+While performing various experiments, we realized that the few improvements are necessary in implemented solution, in order to increase the efficiency and usability of it. These improvements are:
+
+\begin{itemize}
+	\item Computed torque control should be used instead of velocity control for better tracking of trajectories. 
+	\item Implemented whole body motion control solution assumes the relation between smallest singular value of the manipulator and its manipulation capability to be linear, however this is not the case. A proper relation between the smallest singular value and the manipulation capability of a manipulator is needed to be established.  
+	\item Different techniques for the demonstration of the trajectories are needed to be explored so that rotational degrees of the freedom can be demonstrated to the robot and noise in the demonstrated trajectories can be minimized. 
+	\item Current implementation of DMP has the ability to accommodate external feedback like on-line goal modification and obstacle avoidance, but these abilities were not evaluated due to the lack of time. A comprehensive evaluation can be done in this direction. 
+\end{itemize}
+

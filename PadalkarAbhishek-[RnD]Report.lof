@@ -3,16 +3,48 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Dynamic Movement Primitive framework \cite {ijspeert2013dynamical}}}{22}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces 2D DMP with no forcing term}}{23}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Step function trajectory path}}{25}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Effect of number of basis functions ($n\_bfs$)}}{26}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Effect of time step size ($dt$)}}{28}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Effect of time scaling factor $tau$}}{29}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Step function trajectory path}}{26}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Forcing term for y-axis}}{26}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Forcing term for x-axis}}{27}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 6D DMP framework}}{28}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Step function trajectory path}}{30}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Effect of the number of basis functions ($n\_bfs$) on the trajectory approximation}}{31}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Effect of the time step size ($dt$) on the trajectory approximation}}{33}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Effect of the time scaling factor $\tau $ on the trajectory approximation}}{35}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces arUco marker board used for demonstrations}}{36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 6D DMP framework used during experimentation}}{36}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Dynamic Movement Primitive framework}}{37}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces arUco marker board used for demonstrations}}{39}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Learning from Demonstration framework}}{45}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Demonstration of the trajectory using arUco marker board}}{51}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Inverted parabolic trajectory 1}}{52}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Error in the execution of trajectories}}{53}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Inverted parabolic trajectory 2}}{54}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Error in the execution of trajectories}}{54}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Inverted parabolic trajectory 3}}{55}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Error in the execution of trajectories}}{56}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Step function trajectory}}{57}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Error in the execution of step function trajectories}}{58}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Square wave trajectory}}{59}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Error in the execution of square wave trajectories}}{59}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces KUKA YotBot performing whole body motion}}{60}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Inverted parabolic trajectory}}{61}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Error in the execution trajectories}}{62}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Square wave trajectory 1 (WBC)}}{63}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Error in execution of trajectories}}{63}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Square wave trajectory 2 (WBC)}}{64}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Error in execution of trajectories}}{64}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Toyota HSR performing pick and place task}}{66}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Sequencing two DMPs for pick and place task - 1}}{67}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Sequencing two DMPs for pick and place task - 2}}{68}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Error in execution of trajectory 1}}{68}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Error in execution of trajectory 2}}{69}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Toyota HSR grasping noodle box}}{70}
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Grasp 1}}{71}
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Grasp 2}}{71}
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Grasp 3}}{72}
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Grasp 4}}{72}
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Grasp 5}}{73}
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Grasp 6}}{73}
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Error in execution of grasping trajectories}}{74}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

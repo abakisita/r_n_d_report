@@ -1,42 +1,53 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Motivation}{2}
-\contentsline {subsection}{\numberline {1.1.1}Combining Motion Primitives}{2}
-\contentsline {section}{\numberline {1.2}Challenges and Difficulties}{3}
-\contentsline {section}{\numberline {1.3}Problem Statement}{3}
-\contentsline {chapter}{\numberline {2}State of the Art}{5}
-\contentsline {section}{\numberline {2.1}Robot Motion Planning}{5}
-\contentsline {section}{\numberline {2.2}Control Policy Search in Robotics}{7}
-\contentsline {section}{\numberline {2.3}Control Policy Representation}{8}
-\contentsline {section}{\numberline {2.4}Control Policy Representation Using Movement Primitives}{9}
-\contentsline {subsection}{\numberline {2.4.1}Motion Primitives Using Principle Component Analysis}{9}
-\contentsline {subsection}{\numberline {2.4.2}Probabilistic Movement Primitives}{10}
-\contentsline {subsection}{\numberline {2.4.3}Dynamic Movement Primitives}{10}
-\contentsline {subsection}{\numberline {2.4.4}Advantages of Dynamic Movement Primitives}{16}
-\contentsline {chapter}{\numberline {3}Methodology}{19}
-\contentsline {subsection}{\numberline {3.0.1}Formalization of Dynamic Motion Primitives}{19}
-\contentsline {subsection}{\numberline {3.0.2}Analysis of the effects of parameters used in DMP}{24}
-\contentsline {subsubsection}{Effect of number of basis functions}{25}
-\contentsline {subsubsection}{Effect of time step size}{27}
-\contentsline {subsubsection}{Effect of time scaling factor $tau$}{29}
-\contentsline {subsection}{\numberline {3.0.3}Learning the Motion Primitive from Demonstrated Trajectories}{30}
-\contentsline {subsection}{\numberline {3.0.4}Inverse Kinematics Solver and Trajectory Controller}{31}
-\contentsline {section}{\numberline {3.1}Setup}{33}
-\contentsline {section}{\numberline {3.2}Experimental Design}{33}
-\contentsline {chapter}{\numberline {4}Solution}{35}
-\contentsline {section}{\numberline {4.1}Proposed algorithm}{36}
-\contentsline {subsection}{\numberline {4.1.1}Whole Body Motion Control}{38}
-\contentsline {section}{\numberline {4.2}Implementation details}{38}
-\contentsline {subsection}{\numberline {4.2.1}Demonstrated Trajectory Recorder}{38}
-\contentsline {subsection}{\numberline {4.2.2}pydmps}{40}
-\contentsline {chapter}{\numberline {5}Evaluation}{41}
-\contentsline {chapter}{\numberline {6}Results}{43}
-\contentsline {section}{\numberline {6.1}Use case 1}{43}
-\contentsline {section}{\numberline {6.2}Use case 2}{43}
-\contentsline {section}{\numberline {6.3}Use case 3}{43}
-\contentsline {chapter}{\numberline {7}Conclusions}{45}
-\contentsline {section}{\numberline {7.1}Contributions}{45}
-\contentsline {section}{\numberline {7.2}Lessons learned}{45}
-\contentsline {section}{\numberline {7.3}Future work}{45}
-\contentsline {chapter}{Appendix \numberline {A}Design Details}{47}
-\contentsline {chapter}{Appendix \numberline {B}Parameters}{49}
-\contentsline {chapter}{References}{51}
+\contentsline {chapter}{\numberline {2}State of the Art}{3}
+\contentsline {section}{\numberline {2.1}Robot Motion Planning}{3}
+\contentsline {section}{\numberline {2.2}Control Policy Search in Robotics}{5}
+\contentsline {section}{\numberline {2.3}Control Policy Representation}{6}
+\contentsline {section}{\numberline {2.4}Control Policy Representation Using Movement Primitives}{7}
+\contentsline {subsection}{\numberline {2.4.1}Motion Primitives Using Principle Component Analysis}{7}
+\contentsline {subsection}{\numberline {2.4.2}Probabilistic Movement Primitives}{8}
+\contentsline {subsection}{\numberline {2.4.3}Dynamic Movement Primitives (DMP)}{8}
+\contentsline {subsection}{\numberline {2.4.4}Demonstrated Trajectory Recorder}{15}
+\contentsline {chapter}{\numberline {3}Methodology}{17}
+\contentsline {section}{\numberline {3.1}Dynamic Motion Primitives}{17}
+\contentsline {subsection}{\numberline {3.1.1}Advantages of Dynamic Movement Primitives}{17}
+\contentsline {subsection}{\numberline {3.1.2}Formulation of Dynamic Movement Primitives}{18}
+\contentsline {subsubsection}{Discussion}{22}
+\contentsline {subsection}{\numberline {3.1.3}Learning the Motion Primitive from Demonstrated Trajectories}{24}
+\contentsline {subsubsection}{Discussion}{25}
+\contentsline {subsection}{\numberline {3.1.4}Analysis of the effects of the parameters used in DMP}{29}
+\contentsline {subsubsection}{Effect of the number of basis functions on the trajectory approximation}{30}
+\contentsline {subsubsection}{Effect of the time step size on the trajectory approximation}{32}
+\contentsline {subsubsection}{Effect of the time scaling factor $\tau $ on the trajectory approximation}{34}
+\contentsline {subsection}{\numberline {3.1.5}Demonstration of Trajectories}{35}
+\contentsline {subsection}{\numberline {3.1.6}Inverse Kinematics Solver and Trajectory Controller}{37}
+\contentsline {subsection}{\numberline {3.1.7}Whole Body Motion}{39}
+\contentsline {chapter}{\numberline {4}Solution}{43}
+\contentsline {section}{\numberline {4.1}Software Components}{43}
+\contentsline {subsection}{\numberline {4.1.1}demonstrated\_trajectory\_recorder}{43}
+\contentsline {subsection}{\numberline {4.1.2}ros\_dmp}{44}
+\contentsline {subsection}{\numberline {4.1.3}DMP\_Library}{46}
+\contentsline {subsection}{\numberline {4.1.4}dmp\_executor}{46}
+\contentsline {subsection}{\numberline {4.1.5}arm\_cartesian\_velocity\_controller}{46}
+\contentsline {subsection}{\numberline {4.1.6}Robot}{47}
+\contentsline {chapter}{\numberline {5}Experimental Evaluation}{49}
+\contentsline {subsection}{\numberline {5.0.1}Experimental Setup}{50}
+\contentsline {subsection}{\numberline {5.0.2}Acquisition and Repetition of Dynamic Motion Primitives}{50}
+\contentsline {subsubsection}{Inverted Parabolic Trajectory 1}{51}
+\contentsline {subsubsection}{Inverted Parabolic Trajectory 2}{53}
+\contentsline {subsubsection}{Inverted Parabolic Trajectory 3}{55}
+\contentsline {subsubsection}{Step Function Trajectory}{56}
+\contentsline {subsubsection}{Square Wave Trajectory}{58}
+\contentsline {subsection}{\numberline {5.0.3}Whole Body Motion Control on KUKA YouBot}{60}
+\contentsline {subsubsection}{Inverted Parabolic Trajectory}{60}
+\contentsline {subsubsection}{Square Wave Trajectory 1}{62}
+\contentsline {subsubsection}{Discussion}{65}
+\contentsline {section}{\numberline {5.1}Dynamic Motion Primitives on Toyota HSR}{66}
+\contentsline {subsection}{\numberline {5.1.1}Sequencing two DMPs for pick and place task}{66}
+\contentsline {subsection}{\numberline {5.1.2}Grasping an object}{70}
+\contentsline {chapter}{\numberline {6}Conclusions}{75}
+\contentsline {section}{\numberline {6.1}Contributions}{75}
+\contentsline {section}{\numberline {6.2}Future work}{76}
+\contentsline {chapter}{Appendix \numberline {A}Appendix}{79}
+\contentsline {section}{\numberline {A.1}Test Reports Of The Experiments}{79}
+\contentsline {chapter}{References}{91}
