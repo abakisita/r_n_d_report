@@ -1,16 +1,7 @@
-# Master Thesis Latex Template
+# Research and Development Project report 
 
-[![Build Status](https://travis-ci.org/mas-group/project-report.svg?branch=master)](https://travis-ci.org/mas-group/project-report)
+This Research and Development Project report authored by Abhishek Padalkar is based on 9 months work on the topic of Dynamic Motion Primitives.
 
-This template is designed for the R&D and master thesis reports of the Master of Science in Autonomous Systems.  
-Based on the template created by Ronni Hartanto in 2003.
+# Abstract 
 
-The template is configured to be printed two sided by default, you can change this to your supervisor's preference by passing the option `oneside` instead.
-
-You can add a the logo of an external institution by using the command `\thirdpartylogo{path/to/image/}`
-
-
-## Usage
-The main file of the report is `LastNameI-[RnD-MT]Report.tex`, please change it to match the naming convention specified by the wiki, e.g. for an R&D, John Doe would name his file `DoeJ-RnDReport.tex`.
-
-If you have any problems, don't hesitate to let us know! You can open an issue [here](https://github.com/mas-group/project-report/issues/new).
+To be able to plan and execute the motion is one of the primary requirements of an autonomous robot to accomplish a given task. Over the time, numerous solutions were presented for motion planning, which are good enough for solving the problem of motion planning for practical problems. In this work, we present a learning from demonstration framework, based on the dynamic motion primitives, which allows us to program the robot by visual demonstration of the motion. Biologically inspired dynamic motion primitives learn the control policy behind the demonstrated motion in terms of attractor dynamics of a non-linear second order differential equation. We evaluate the performance of dynamic motion primitives for generalization of numerous demonstrated trajectories on two five degrees of freedom manipulators. For boosting the manipulation capabilities of these manipulators, we propose the idea of using the mobile base motion along with the manipulator motion which lead to whole body motion control framework for manipulation. Proposed whole body motion control framework was integrated in current software solution for manipulation of Toyota HSR robot.
